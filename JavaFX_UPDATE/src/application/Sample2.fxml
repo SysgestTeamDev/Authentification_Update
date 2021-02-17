@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="-8.0" prefHeight="512.0" prefWidth="166.0" style="-fx-background-color: #D35400;">
+         <children>
+            <Button layoutX="16.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleOnClickAccueil" prefHeight="31.0" prefWidth="123.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Accueil" />
+            <Button layoutX="16.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleOnClickCreerUser" prefHeight="31.0" prefWidth="123.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Responsables" />
+            <Button layoutX="16.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleOnClickDeconnecte" prefHeight="31.0" prefWidth="123.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Assistants" />
+            <Text layoutX="26.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Utilisateur">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="8.0" layoutY="53.0" prefHeight="76.0" prefWidth="140.0">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="140.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text layoutX="37.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SyGesT" wrappingWidth="91.47006607055664">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="21.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.3619047619047619">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.12558414041996002" green="0.08900000154972076" blue="0.8899999856948853" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Line endX="100.0" layoutX="65.0" layoutY="137.0" startX="-100.0" stroke="#c10d97" />
+            <Button layoutX="21.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleOnClickDeconnecte" prefHeight="31.0" prefWidth="123.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Lister utilisateurs" />
+            <Line endX="100.0" layoutX="91.0" layoutY="383.0" startX="-100.0" />
+            <Button layoutX="18.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleOnClickDeconnecte" prefHeight="31.0" prefWidth="123.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Quitter" />
+            <Button layoutX="32.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleOnClickConnecter" prefHeight="32.0" prefWidth="91.0" style="-fx-background-radius: 15px 50px 30px; -fx-background-color: #8E44AD;" text="Deconnecter" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="143.0" prefHeight="504.0" prefWidth="543.0">
+         <children>
+            <ImageView fitHeight="504.0" fitWidth="543.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="505.0" fitWidth="528.0" layoutX="15.0">
+               <image>
+                  <Image url="@../../../../../Pictures/Saved%20Pictures/WhatsApp%20Image%202021-02-07%20at%2012.40.48%20(2).jpeg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="15.0" layoutY="125.0" prefHeight="378.0" prefWidth="528.0">
+               <children>
+                  <TableView accessibleRole="COMBO_BOX" prefHeight="378.0" prefWidth="528.0" style="-fx-background-color: #E9F7EF;">
+                    <columns>
+                      <TableColumn prefWidth="37.999969482421875" text="ID" />
+                      <TableColumn prefWidth="114.66665649414062" text="Nom" />
+                        <TableColumn prefWidth="104.66668701171875" text="Prenom" />
+                        <TableColumn prefWidth="96.0" text="Email" />
+                        <TableColumn prefWidth="92.6666259765625" text="Telephone" />
+                        <TableColumn prefWidth="82.66668701171875" text="Adresse" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Text fill="#ff8c8c" layoutX="22.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateur connecte" wrappingWidth="166.0" />
+            <Line endX="429.0" endY="-8.666664123535156" layoutX="115.0" layoutY="38.0" startX="-100.83334350585938" startY="-8.666664123535156" stroke="#84978a" />
+            <TextField layoutX="311.0" layoutY="88.0" prefHeight="26.0" prefWidth="221.0" promptText="search" style="-fx-background-color: white; -fx-background-radius: 15px;;" />
+            <ImageView fitHeight="24.0" fitWidth="43.0" layoutX="483.0" layoutY="89.0">
+               <image>
+                  <Image url="@../../../../../Pictures/Saved%20Pictures/MarketingResources_Thumbnail_Search.width-1200.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
